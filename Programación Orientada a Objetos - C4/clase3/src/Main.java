@@ -19,25 +19,24 @@ public class Main {
 
         //funcion que pida la cantidad de comida y retorna cuantos paquetes se consumieron
 
-    }
-
-    Integer cantidadPaquetes = cuantosPaquetesNecesita(cantidadParaEstarLleno);
+        Integer cantidadPaquetes = paquetesRequeridos(cantidadConsumir);
 
         System.out.println(nombre + " consumio " + cantidadPaquetes + " paquetes");
-}
 
-    public static Integer cuantoConsume (Double cantidad) {
+    }
+
+    public static Integer paquetesRequeridos(Double cantidadTotaldeComida) {
         Scanner scanner = new Scanner(System.in);
-
-        Double cantidadDeConsumo = 0.0;
+        Double cantidadConsumida = 0.0;
 
         Integer cantidadPaquetes = 0;
 
-        while (cantidad >= cantidadDeConsumo){
-            System.out.println("Cuantos kilos tiene el paquete");
+        while (cantidadTotaldeComida >= cantidadConsumida) {
+
+            System.out.println("Cuantos kilos tienes el paquete");
             Double pesoPaquete = scanner.nextDouble();
-            cantidadDeConsumo += pesoPaquete;
-            cantidadPaquetes++;
+            cantidadConsumida += pesoPaquete;
+            cantidadPaquetes ++ ;
 
         }
         return cantidadPaquetes;
